@@ -1,0 +1,19 @@
+<launch>
+    <node pkg="octomap_server" type = "octomap_server_node" name="octomap_server">
+
+        <param name ="resolution" value="0.15" />
+        <param name = "frame_id" type="str" value="robot_foot_init" />
+        <!-- 投影最大半径 -->
+        <param name = "sensor_model/max_range" value="30.0" /> 
+        <param name = "latch" value="false" />
+        <param name = "pointcloud_max_z" value="-0.1" />
+        <param name = "pointcloud_min_z" value="-0.5" />
+
+        <!-- 增加了半径滤波器 -->
+        <param name = "outrem_radius" type = "double" value = "1.0" />
+        <param name = "outrem_neighbors" type = "int" value = "10" />
+
+        
+        <remap from ="cloud_in" to="/cloud_registered" />
+    </node>
+</launch>
