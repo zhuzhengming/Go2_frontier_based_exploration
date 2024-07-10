@@ -1,0 +1,12 @@
+<launch>
+    
+    <include file="$(find livox_ros_driver2)/launch_ROS1/msg_MID360.launch" />
+
+    <include file="$(find go2_slam)/launch/build_map.launch" />
+
+    <include file="$(find robot_navigation)/launch/move_base.launch" />
+    
+    <include file="$(find go2_rrt_exploration)/launch/simple.launch" />
+    
+    <include file="$(find go2_rrt_exploration)/launch/rrt_rviz.launch" />
+</launch>

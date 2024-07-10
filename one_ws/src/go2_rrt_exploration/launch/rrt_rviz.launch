@@ -1,0 +1,5 @@
+<launch>
+  <!-- rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find go2_rrt_exploration)/rviz/go2.rviz"/>
+</launch>

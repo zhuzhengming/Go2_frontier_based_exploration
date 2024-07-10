@@ -1,0 +1,14 @@
+GlobalPlanner:
+  allow_unknown: true
+  default_tolerance: 0.2
+  use_grid_path: false
+  use_quadratic: false
+  old_navfn_behavior: false
+  lethal_cost: 253
+  neutral_cost: 50
+  cost_factor: 3
+  publish_potential: true
+  orientation_mode: 0
+  orientation_window_size: 1
+  outline_map: true
+  visualize_potential: false
