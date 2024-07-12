@@ -4,9 +4,7 @@
 
 This project is actually a comparative version based on the autonomous exploration of a quadruped robot in complex underground environments (referencing the DARPA Challenge). 
 
-More details: 
-
-[Link]: https://blog.csdn.net/weixin_46187561/article/details/140327269?spm=1001.2014.3001.5502
+More details: https://blog.csdn.net/weixin_46187561/article/details/140327269?spm=1001.2014.3001.5502
 
 **Hardware** **platform**: Unitree GO2, Nvidia Orin NX 16GB, Livox MID360 
 
