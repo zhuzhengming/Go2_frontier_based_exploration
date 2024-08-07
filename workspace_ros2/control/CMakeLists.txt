@@ -39,14 +39,9 @@ add_executable(control src/control.cpp src/ros2_sport_client.cpp)
 
 ament_target_dependencies(control ${DEPENDENCY_LIST})
 
-# node2
-add_executable(turn_around src/turn_around.cpp src/ros2_sport_client.cpp)
-
-ament_target_dependencies(turn_around ${DEPENDENCY_LIST})
 
 install(TARGETS
     control
-    turn_around
     DESTINATION lib/${PROJECT_NAME}
 )
 
