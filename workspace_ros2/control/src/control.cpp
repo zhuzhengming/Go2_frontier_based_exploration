@@ -5,6 +5,7 @@
 #include <optional>
 
 bool FootAdjust = false;
+bool FootFlag = false;
 float RaisingHeight = 0.03;
 
 
@@ -67,12 +68,15 @@ private:
         SportClient sport_req;
         unitree_api::msg::Request req;
 
-        if(!FootAdjust)
+        if(FootAdjust)
         {
-            sport_req.FootRaiseHeight(req, RaisingHeight);
-            publisher_->publish(req);
-            FootAdjust = true;
-            RCLCPP_INFO(this->get_logger(),"Foot Raise Height is %.2f:", RaisingHeight + 0.09);
+            if(!FootFlag)
+            {
+                sport_req.FootRaiseHeight(req, RaisingHeight);
+                publisher_->publish(req);
+                FootFlag = true;
+                RCLCPP_INFO(this->get_logger(),"Foot Raise Height is %.2f:", RaisingHeight + 0.09);
+            }
         }
 
         // Transform the last received cmd_vel into request format
